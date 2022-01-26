@@ -33,7 +33,7 @@ export default function BasicTrigger() {
 
   console.log(gsap);
   return (
-    <div>
+    <div className="bg-black ">
       <div class="box a">a</div>
       <div class="box b">b</div>
       <div class="box ghost">c</div>

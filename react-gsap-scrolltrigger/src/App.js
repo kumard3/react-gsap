@@ -1,7 +1,9 @@
+import BasicTrigger from "./components/BasicTrigger";
+
 function App() {
   return (
-    <div className="bg-[#0F182B] text-white min-h-screen">
-      <h1>tailwind css starter </h1>
+    <div className="min-h-[200vh]">
+ <BasicTrigger />
     </div>
   );
 }

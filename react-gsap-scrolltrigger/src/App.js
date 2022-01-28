@@ -18,7 +18,7 @@ function App() {
       </div> */}
 
       <Router>
-        <nav className="text-white h-[4.3rem] text-3xl  items-center flex justify-around ">
+        <nav className="text-white h-[4.3rem] text-3xl items-center flex justify-around ">
           <Link to="/">home</Link>
           <Link to="/ScrollReveal">ScrollReveal</Link>
           <Link to="/LayeredPinning">LayeredPinning</Link>

@@ -1,0 +1,32 @@
+
+  .section1 {
+    background: #eee;
+    padding-right: 500px;
+  }
+  
+  .section2 {
+    background: #c1c1c1;
+    padding-right: 700px;
+  }
+  
+  .section3 {
+    background: #eee;
+    overflow: hidden;
+  }
+  
+  .section-heading {
+    font-size: 70px;
+    padding-right: 1000px
+  }
+  
+  .boxees_holder {
+    height: 300px;
+    display: inline-flex;
+    gap: 30px;
+  }
+  
+  .boxees_holder .boxe {
+    width: 200px;
+    height: 100%;
+    background: #ff0000;
+  }

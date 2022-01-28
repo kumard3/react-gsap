@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  background-color: #111;
+
+}
 .box.active {
     background-color: blue;
-  }
-  
-  body {
-    background-color: #111;
-
   }
 
   .panel {
@@ -61,10 +61,8 @@
     position: absolute;
     left: 600px;
     top: 0px;
-  /*   visibility: hidden; */
+    visibility: hidden;
     background-color: #777;
   }
-  
-  .r{
-    will-change: transform;
-  }
+
+

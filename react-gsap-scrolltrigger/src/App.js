@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 
 import BasicTrigger from "./components/BasicTrigger";
 import LayeredPinning from "./components/LayeredPinning";
@@ -18,8 +18,13 @@ function App() {
       </div> */}
 
       <Router>
+        <nav className="text-white h-[4.3rem] text-3xl  items-center flex justify-around ">
+          <Link to="/">home</Link>
+          <Link to="/ScrollReveal">ScrollReveal</Link>
+          <Link to="/LayeredPinning">LayeredPinning</Link>
+        </nav>
         <Routes>
-          <Route exact path="/" element={ <BasicTrigger />} />
+          <Route exact path="/" element={<BasicTrigger />} />
           <Route exact path="/ScrollReveal" element={<ScrollReveal />} />
           <Route exact path="/LayeredPinning" element={<LayeredPinning />} />
         </Routes>

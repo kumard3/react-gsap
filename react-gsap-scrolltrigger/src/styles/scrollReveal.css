@@ -1,31 +1,31 @@
 
-  .section1 {
+  .sectionr1 {
     background: #eee;
     padding-right: 500px;
   }
   
-  .section2 {
+  .sectionr2 {
     background: #c1c1c1;
     padding-right: 700px;
   }
   
-  .section3 {
+  .sectionr3 {
     background: #eee;
     overflow: hidden;
   }
   
-  .section-heading {
+  .section-headingr {
     font-size: 70px;
     padding-right: 1000px
   }
   
-  .boxees_holder {
+  .boxeees_holder {
     height: 300px;
     display: inline-flex;
     gap: 30px;
   }
   
-  .boxees_holder .boxe {
+  .boxeees_holder .boxee {
     width: 200px;
     height: 100%;
     background: #ff0000;

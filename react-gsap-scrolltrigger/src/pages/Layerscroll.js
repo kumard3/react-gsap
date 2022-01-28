@@ -1,31 +1,34 @@
-import React,{useEffect} from "react";
+import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
-import '../styles/scrollReveal.css';
-export default function LayeredPinning() {
+import "../styles/scrollReveal.css";
+export default function Layeredscroll() {
   useEffect(() => {
-
     let sections = gsap.utils.toArray(".section3");
-    let boxees = gsap.utils.toArray('.boxees_holder');
-  
-  gsap.to(boxees, {
-    x: () => { return -(sections[0].scrollWidth - document.documentElement.clientWidth) + "px" },
-    ease: "none",
-    scrollTrigger: {
-      trigger: boxees,
-      start: () => "center center",
-      end: () => { return "+=" + sections[0].scrollWidth },
-      scrub: true,
-      pin: '.wrapper',
-      markers: true,
-      anticipatePin: 1
-    }
-  
+    let boxees = gsap.utils.toArray(".boxees_holder");
+
+    gsap.to(boxees, {
+      x: () => {
+        return (
+          -(sections[0].scrollWidth - document.documentElement.clientWidth) +
+          "px"
+        );
+      },
+      ease: "none",
+      scrollTrigger: {
+        trigger: boxees,
+        start: () => "-600px",
+        end: () => {
+          return "+=" + sections[0].scrollWidth;
+        },
+        scrub: true,
+        // pin: '.wrapper',
+        markers: true,
+        anticipatePin: 1,
+      },
+    });
   });
 
-
-  })
-  
   return (
     <>
       {/* <div className="h-[150vh]">

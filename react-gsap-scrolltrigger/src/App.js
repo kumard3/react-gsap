@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Link, Route, Routes } from "react-router-dom";
 import BasicTrigger from "./components/BasicTrigger";
 import LayeredPinning from "./components/LayeredPinning";
 import ScrollReveal from "./components/ScrollReveal";
+import Layeredscroll from "./pages/Layerscroll";
 
 function App() {
   return (
@@ -26,7 +27,7 @@ function App() {
         <Routes>
           <Route exact path="/" element={<BasicTrigger />} />
           <Route exact path="/ScrollReveal" element={<ScrollReveal />} />
-          <Route exact path="/LayeredPinning" element={<LayeredPinning />} />
+          <Route exact path="/LayeredPinning" element={<Layeredscroll />} />
         </Routes>
       </Router>
     </>

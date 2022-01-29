@@ -5,7 +5,6 @@ import { LoremIpsum } from "react-lorem-ipsum";
 import { items } from "./data";
 
 export default function Item({ id }) {
-  const test = items.find((item) => item.id === id);
 
   return (
     <>
@@ -33,8 +32,7 @@ export default function Item({ id }) {
                 className="title-container"
                 layoutId={`title-container-${id}`}
               >
-                {/* <span className="category">{category}</span> */}
-                {/* <h2>{title}</h2> */}
+                
               </motion.div>
               <motion.div className="content-container" animate>
                 <LoremIpsum

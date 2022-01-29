@@ -11,6 +11,7 @@ import { Image } from "./Image.jsx";
 import { openSpring, closeSpring } from "./animations";
 import { useScrollConstraints } from "../../utils/use-scroll-constraints";
 import { useWheelScroll } from "../../utils/use-wheel-scroll";
+import useOnClickOutside from "../../components/useOnClickOutside";
 
 const dismissDistance = 10;
 
@@ -89,17 +90,21 @@ const dismissDistance = 10;
 //   },
 //   (prev, next) => prev.isSelected === next.isSelected
 // );
-
-export default function Card ({
+const Card= React.memo(
+function Cards ({
   isSelected,
   id,
   title,
   category,
-
   pointOfInterest,
   backgroundColor,
+  testing
 })  {
+
   const router = useRouter()
+
+
+
   const y = useMotionValue(0);
   const zIndex = useMotionValue(isSelected ? 2 : 0);
 
@@ -136,7 +141,8 @@ export default function Card ({
     <li ref={containerRef} className={`card`}>
       <h1 style={{ color: "white" }}>helo</h1>
 
-      <Overlay isSelected={isSelected} />
+
+      <Overlay isSelected={isSelected} testing={testing} />
       <div className={`card-content-container ${isSelected && "open"}`}>
         <motion.div
           ref={cardRef}
@@ -147,22 +153,24 @@ export default function Card ({
           dragConstraints={constraints}
           onDrag={checkSwipeToDismiss}
           onUpdate={checkZIndex}
-        >
+          >
           <Image
             id={id}
             isSelected={isSelected}
             pointOfInterest={pointOfInterest}
             backgroundColor={backgroundColor}
-          />
+            />
           <Title title={title} category={category} isSelected={isSelected} />
           <ContentPlaceholder />
         </motion.div>
       </div>
+
+
       {/* {!isSelected && <a href={id} className={`card-open-link`} />} */}
     </li>
   );
-}
-const Overlay = ({ isSelected }) => (
+})
+const Overlay = ({ isSelected,testing }) => (
   <motion.div
     initial={false}
     animate={{ opacity: isSelected ? 1 : 0 }}
@@ -170,6 +178,8 @@ const Overlay = ({ isSelected }) => (
     style={{ pointerEvents: isSelected ? "auto" : "none" }}
     className="overlay"
   >
-    <a href="/" />
+    <a href="/" onClick={testing} />
   </motion.div>
 );
+
+export default  Card

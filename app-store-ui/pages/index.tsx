@@ -9,9 +9,10 @@ import Card from "./Card/Card.jsx";
 
 export default function App() {
   const [id, setId] = React.useState("");
-  // function handler (e) {
-  //   return setId()
-  // }
+  
+  function handler () {
+    return setId("")
+  }
   const imageHasLoaded = true;
   React.useEffect(() => {}, [id]);
   console.log(id);
@@ -22,7 +23,7 @@ export default function App() {
         {items.map((card) => {
           return (
             <div onClick={() => setId(card.id)}>
-              <Card key={card.id} isSelected={id === card.id} {...card} />
+              <Card key={card.id} tester={handler}  isSelected={id === card.id} {...card} />
             </div>
           );
         })}

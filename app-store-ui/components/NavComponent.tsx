@@ -40,7 +40,7 @@ export default function NavComponent() {
           <div className="flex justify-between items-center   py-6 sm:justify-between sm:space-x-10">
             <div className="flex justify-start lg:w-0 lg:flex-1">
               {/* <li className={router.pathname == "#hero" ? "active" : "koko"}>
-              <Link href="#hero">home</Link>
+              <Link to="#hero">home</Link>
             </li> */}
               <Link href="#home">
                 <h1>LOGO</h1>
@@ -126,7 +126,7 @@ export default function NavComponent() {
             <nav className="hidden sm:flex space-x-10 items-center">
               {navData.map((n) => {
                 return (
-                  <Link key={n.name} href={n.href}>
+                  <Link key={n.name} to={n.href}>
                     {n.name}
                   </Link>
                 );
